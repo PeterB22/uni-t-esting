@@ -4,7 +4,8 @@
   "description": "This project is meant to showcase unit testing",
   "main": "src/encoding.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage --coverageReporters='text-summary'"
   },
   "author": "Börcsök Péter",
   "license": "ISC",
