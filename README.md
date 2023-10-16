@@ -27,7 +27,9 @@ Then we add to each obtained digit consecutive digits from the key. For example.
   14 10 22 29  6 27 19 18  6  12 8
 
 ```
-Task
+
+
+Task I
 Write a function that accepts str string and key number and returns an array of integers representing encoded str.
 
 Input / Output
@@ -37,4 +39,33 @@ The key input number is a positive integer.
 Example
 Encode("scout",1939);  ==>  [ 20, 12, 18, 30, 21]
 Encode("masterpiece",1939);  ==>  [ 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8]
+```
+
+
+Task II
+Write a function that accepts an array of integers code and a key number. As the result, it should return string containg a decoded message from the code.
+
+Input / Output
+The code is a array of positive integers.
+The key input is a nonnegative integer.
+
+Example
+```
+decode([ 20, 12, 18, 30, 21],1939);  ==> "scout"
+decode([ 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8],1939);  ==>  "masterpiece"
+```
+
+
+Task III
+Write a function that accepts a message string and an array of integers code. As the result, return the key that was used to encrypt the message. The key has to be shortest of all possible keys that can be used to code the message: i.e. when the possible keys are 12 , 1212, 121212, your solution should return 12.
+
+Input / Output:
+The message is a string containing only lowercase letters.
+The code is an array of positive integers.
+The key output is a positive integer.
+Examples
+```
+findTheKey("scout", [20, 12, 18, 30, 21]);  =>  1939
+findTheKey("masterpiece", [14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8]);  =>  1939
+findTheKey("nomoretears", [15, 17, 14, 17, 19, 7, 21, 7, 2, 20, 20]);  =>  12
 ```
