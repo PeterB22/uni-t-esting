@@ -1,6 +1,4 @@
-import { cypherMap } from "./cypher-map";
 import { decode } from "./decode";
-import { encode } from "./encode";
 
 /**
  * findTheKey("scout", [20, 12, 18, 30, 21]);  =>  1939
@@ -10,7 +8,7 @@ import { encode } from "./encode";
 export function findTheKey(message: string, code: number[]): number {
     const lowerCasedMessage = message.toLowerCase();
     const encodedCharacters = Array.from(lowerCasedMessage).map(character => {
-        return cypherMap[character];
+        return character.charCodeAt(0) - 96;
     });
     const keyNumbers = encodedCharacters.map((encodedChar, index) => {
         let targetNumber: number;

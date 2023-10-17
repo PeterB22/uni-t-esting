@@ -1,16 +1,14 @@
-import { cypherMap } from "./cypher-map";
-
 /**
- * Encode("scout",1939);  ==>  [ 20, 12, 18, 30, 21]
-   Encode("masterpiece",1939);  ==>  [ 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8]
+ * encode("scout",1939);  ==>  [ 20, 12, 18, 30, 21]
+   encode("masterpiece",1939);  ==>  [ 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8]
  */
 export const encode = (message: string, key: number): number[] => {
     const keyAsNumberArray = String(key).split('').map(Number);
     const lowerCasedMessage = message.toLowerCase();
-    const encodedCharacters = Array.from(lowerCasedMessage).map(character => {
-        return cypherMap[character];
+    const characterCodes = Array.from(lowerCasedMessage).map(character => {
+        return character.charCodeAt(0) - 96;
     });
-    const result = encodedCharacters.map((encodedChar, index) => {
+    const result = characterCodes.map((encodedChar, index) => {
         let targetNumber: number;
         if (index < keyAsNumberArray.length) {
             targetNumber = keyAsNumberArray[index];
