@@ -71,3 +71,7 @@ findTheKey("scout", [20, 12, 18, 30, 21]);  =>  1939
 findTheKey("masterpiece", [14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8]);  =>  1939
 findTheKey("nomoretears", [15, 17, 14, 17, 19, 7, 21, 7, 2, 20, 20]);  =>  12
 ```
+
+The example page can be found in the following link: https://www.codewars.com/kata/592e830e043b99888600002d
+
+The other tasks are the sub-links, mentioned at the `Digital cypher series` section.
