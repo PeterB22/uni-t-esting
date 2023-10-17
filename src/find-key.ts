@@ -1,3 +1,4 @@
+import { BASE_ASCII_CHAR } from "../utils/constants";
 import { decode } from "./decode";
 
 /**
@@ -8,12 +9,12 @@ import { decode } from "./decode";
 export function findTheKey(message: string, code: number[]): number {
     const lowerCasedMessage = message.toLowerCase();
     const encodedCharacters = Array.from(lowerCasedMessage).map(character => {
-        return character.charCodeAt(0) - 96;
+        return BASE_ASCII_CHAR - character.charCodeAt(0);
     });
     const keyNumbers = encodedCharacters.map((encodedChar, index) => {
         let targetNumber: number;
         if (index < code.length) {
-            targetNumber = code[index] - encodedChar;
+            targetNumber = code[index] + encodedChar;
         } else {
             targetNumber = index;
         }
