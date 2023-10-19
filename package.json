@@ -5,13 +5,18 @@
   "main": "src/encoding.ts",
   "scripts": {
     "test": "jest",
-    "test:coverage": "jest --coverage --coverageReporters='text-summary'"
+    "test:coverage": "jest --coverage --coverageReporters='text-summary'",
+    "test:encode": "jest tests/encode.test",
+    "test:decode": "jest tests/decode.test",
+    "test:find-key": "jest tests/find-key.test",
+    "ts-node": "ts-node"
   },
   "author": "Börcsök Péter",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.5",
     "jest": "^29.7.0",
+    "ts-node": "^10.9.1",
     "typescript": "5.2.2"
   },
   "dependencies": {
