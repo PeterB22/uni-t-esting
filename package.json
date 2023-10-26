@@ -6,9 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage --coverageReporters='text-summary'",
-    "test:encode": "jest tests/encode.test",
-    "test:decode": "jest tests/decode.test",
-    "test:find-key": "jest tests/find-key.test",
+    "test:roman": "jest tests/roman.test",
     "ts-node": "ts-node"
   },
   "author": "Börcsök Péter",
